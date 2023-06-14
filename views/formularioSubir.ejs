@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Añadir productos</title>
+  <link rel="stylesheet" href="../public/css/subirProductos.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+        <nav>
+            <div class="logo"><img src="../public/img/logo.png"></div>
+            <div class="nav">
+                <a href="/seleccion">Volver</a>
+                <%if (usuario) { %>
+                    <a href="/">
+                <%= usuario %> </a> <% } %>
+                <%if (usuario) { %>
+                    <a class="nav-link" href="/logout">Salir </a>
+                <% } %>
+            </div>
+        </nav>
+    </div>
+    <hr>
+</header>
+  <section class="section1">
+    <div class="formu">
+        <div class="container">
+            <form action="/upload" method="post" enctype="multipart/form-data" class="form">
+                <h2 class="form__title">Agregar productos:</h2>
+                <div class="form__group">    
+                    <input name="name" type="text" id="usuario" class="form__input" placeholder="Nombre del producto:" required>
+                </div>
+            
+                <div class="form__group">    
+                    <input name="price" type="text" id="Contraseña" class="form__input" placeholder="Precio del producto:" required>
+                    <span class="form_line"></span>
+                </div>
+                <div class="form__group">    
+                    <input name="details" type="text" id="Contraseña" class="form__input" placeholder="Descripción:" required>
+                    <span class="form_line"></span>
+                </div>
+                <div class="form__group">
+                    <div class="form__addFile">     
+                        <p>Añadir archivo</p>
+                        <input type="file" name="image" id="form__file" >   
+                    </div> 
+                </div>
+                <div class="form_group">          
+                    <input type="submit" class="form__submit" value="Añadir producto">   
+                </div> 
+            </form>
+        </div>
+    </div>
+</section>
+<div class="clear">
+    <hr>
+</div>
+<footer>
+    <div class="container">
+        <p>copyright 2023 &#169 ServiTools</p>
+    </div>
+</footer>
+
+
+
+</body>
+
+</html>

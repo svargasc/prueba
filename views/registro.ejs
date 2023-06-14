@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="../public/css/registro.css">
+    <link rel="shortcut icon" href="../public/img/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><img src="../public/img/logo.png"></div>
+                <div class="nav">
+                    <a href="/">INICIO</a>
+                    <a href="/registro">Registrarse</a>
+                    <a href="/login">Iniciar</a>
+                </div>
+            </nav>
+        </div> 
+    </header>
+    <div class="clear">
+        <hr>
+    </div>
+    <div class="formu">
+        <form action="/registro" method="post" class="form">
+            <h2 class="form__title">FORMULARIO DE REGISTRO</h2>
+            <div class="form__container"></div>                    
+    
+                <div class="form__group">                    
+                    <input name="nombres" type="text" id="nombre" class="form__input" placeholder="Nombres:" required>
+                    <span class="form_line"></span>
+                </div>
+    
+                <div class="form__group">                    
+                    <input name="apellidos" type="text" id="apellido" class="form__input" placeholder="Apellidos:" required>
+                    <span class="form_line"></span>
+                </div>
+                
+                <div class="form__group">    
+                    <input name="usuario" type="text" id="usuario" class="form__input" placeholder="Usuario:" required>
+                </div>
+                
+                <div class="form__group">    
+                    <input name="contrasena" type="password" id="Contraseña" class="form__input" placeholder="Contraseña:" required>
+                    <span class="form_line"></span>
+                </div>    
+    
+                <div class="form__group">   
+                    <input name="correo" type="email" id="Correo" class="form__input" placeholder="Correo:" required>
+                    <span class="form_line"></span>
+                </div> 
+                <div class="form_group">          
+                    <input type="submit" class="form__submit" value="ENVIAR">   
+                </div>            
+            </div>   
+    </div>
+    </form>
+    <div class="clear">
+        <hr>
+    </div>
+    <footer>
+        <div class="container">
+            <p>copyright 2023 &#169 ServiTools</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

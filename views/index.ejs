@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServiTools</title>
+    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="shortcut icon" href="../public/img/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><img src="../public/img/logo.png"></div>
+                <div class="nav">
+                    <%if (usuario) { %>
+                        <a href="/seleccion">Opciones</a>
+                    <% } %> 
+                    <%if (usuario) { %>
+                        <a href="/"><%=  usuario  %></a>
+                    <% } %>   
+                    <%if (usuario) { %>
+                        <a class="nav-link" href="/logout">Salir</a>
+                        <% } %>
+                    <%if (!usuario) { %>
+                        <a href="/registro">Registrarse</a>
+                    <% } %> 
+                    <%if (!usuario) { %>
+                        <a href="/login">Ingresar</a>
+                    <% } %> 
+                </div>
+            </nav>
+        </div> 
+        <hr> 
+    </header>
+    <section class="section1">
+        <div class="container">
+            <div class="section1_text">
+                <h1>BIENVENIDOS A SERVITOOLS</h1>
+                <h2>Herramienta de AutoServicio</h2>
+                <p>perfecta para tu negocio</p>
+            </div>
+            <div class="section1_buttons">
+                <button class="button1_sec1"><strong>ACERCA DEL INVENTARIO</strong></button>
+                <button class="button2_sec1"><strong>ACERCA DE SERVITOOLS</strong></button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="modal">
+        <div class="modal__container">           
+            <h1>ACERCA DE SERVITOOLS</h1>
+            <p>Una Herramienta Práctica, Que
+                Facilitara El Mecanismo De Atención
+                Al Cliente En Bares Y Cafe, También
+                Hará Que Tu Negocio Sea Más
+                Eficiente.
+            </p>
+            <div class="modal__img">
+                <img class="img__modal" src="../public/img/section2_img1">
+                <img class="img__modal" src="../public/img/section2_img2">
+                <img class="img__modal" src="../public/img/section2_img3">
+            </div>
+            <a class="modal__close">✘</a>            
+        </div>
+    </section>
+
+    <section class="modal1">
+        <div class="modal__container1">           
+            <h1>ACERCA DEL INVENTARIO</h1>
+            <p>Contamos Con Un Inventario Digital,
+                Que Funciona A Tiempo Real,
+                En El Que Podras Gestionar Todos
+                Los Recursos Con Los Que Cuenta
+                Tu Negocio, Esta Diseñado Para
+                Eliminar Recursos A Medida Que
+                Estos Se Consumen O Son Utilizados,
+                Asi Mismo Añadir Recursos
+                Que Fueron Adquiridos Ultimamente.
+            </p>
+            <a class="modal__close1">✘</a>            
+        </div>
+    </section>
+    <div class="clear">
+        <hr>    
+    </div>
+    <footer>
+        <div class="container">
+            <p>copyright 2023 &#169 ServiTools</p>
+        </div>
+    </footer>
+</body>
+<script>
+    const openModal = document.querySelector('.button2_sec1');
+    const modal = document.querySelector('.modal');
+    const closeModal = document.querySelector('.modal__close');
+
+    openModal.addEventListener('click', (e)=>{
+        e.preventDefault();
+        modal.classList.add('modal--show');
+    })
+
+    closeModal.addEventListener('click', (e)=>{
+        e.preventDefault();
+        modal.classList.remove('modal--show');
+    })
+
+    const openModal1 = document.querySelector('.button1_sec1');
+    const modal1 = document.querySelector('.modal1');    
+    const closeModal1 = document.querySelector('.modal__close1');
+
+    openModal1.addEventListener('click', (e)=>{
+        e.preventDefault();
+        modal1.classList.add('modal--show1');
+    })
+
+    closeModal1.addEventListener('click', (e)=>{
+        e.preventDefault();
+        modal1.classList.remove('modal--show1');
+    })
+</script>
+</html>

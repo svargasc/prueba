@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="public/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../public/css/seleccion.css">
+    <title>Añadir productos</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><img src="../public/img/logo.png"></div>
+                <div class="nav">
+                    <a href="/upload">Productos</a>
+                    <%if (usuario) { %>
+                        <a href="/">
+                    <%= usuario %> </a> <% } %>
+                    <%if (usuario) { %>
+                        <a class="nav-link" href="/logout">Salir </a>
+                    <% } %>
+                </div>
+            </nav>
+        </div>
+        <hr>
+    </header>
+    <section class="section1">
+        <div class="container">
+            <div class="productos">
+                <img src="../public/img/logo_añadirProductos.png">
+                <button><a href="/formularioSubir">Añadir productos</a></button>
+            </div>
+            <div class="inventario">
+                <img src="../public/img/logo_inventario.png">
+                <button><a href="/indexDos">Inventario</a></button>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <footer>
+        <div class="container">
+            <p>copyright 2023 &#169 ServiTools</p>
+        </div>
+    </footer>
+</body>
+
+</html>
