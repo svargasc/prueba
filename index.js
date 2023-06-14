@@ -101,7 +101,7 @@ const pool = mysql.createPool({
   connectionLimit: 100,
   host: "localhost",
   user: "root",
-  password: "Sena12345",
+  password: "Apto1404",
   database: "servitools",
   debug: false,
 });
